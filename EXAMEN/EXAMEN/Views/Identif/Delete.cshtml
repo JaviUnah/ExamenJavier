@@ -1,0 +1,92 @@
+﻿@model EXAMEN.Models.Identif
+@{
+    ViewData["Title"] = "Borrar";
+}
+
+<h1>Borrar</h1>
+<hr style="background-color:white" />
+
+<body style="background-color:cornflowerblue;">
+    <h3>Esta seguro de eliminar esta pedazo de banda</h3>
+    <hr style="background-color:white" />
+    <div>
+        <h4>Bandas</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionCodigo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionCodigo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionApellido)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionApellido)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionNombre)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionNombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionApodo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionApodo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionDireccion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionDireccion)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionTelefono)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionTelefono)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionCelular)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionCelular)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionFax)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionFax)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionEmail)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionEmail)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionCPostal)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionCPostal)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdentificacionObservacion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdentificacionObservacion)
+            </dd>
+        </dl>
+    </div>
+</body>
+    <div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="IdentificacionId" />
+            <input type="submit" class="btn btn-danger" value="Borrar" />
+            <a asp-action="Index" class="btn btn-success">Regresar</a>
+        </form>
+
+    </div>

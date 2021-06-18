@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EXAMEN.Models.Identif>
+
+@{
+    ViewData["Title"] = "Registros";
+}
+
+<h2>Registros</h2>
+
+<hr  style="background-color:white"/>
+
+<body style="background-color:cornflowerblue;">
+    <div class="row search">
+        <div class="col-auto">
+            <input type="text" class="form-control-plaintext" id="txt-search" placeholder="Buscar..." style="background-color:white" />
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-secondary" onclick="busque_search_search()" id="search-link"><i class="fas fa-search"></i></a>
+            <a asp-action="Create" class="btn btn-success"><i class="far fa-file"></i> Nuevo Registro</a>
+        </div>
+    </div>
+
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdentificacionNombre)
+                </th>
+                <th></th>
+            </tr>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.IdentificacionNombre)</td>
+                    <td>
+                        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.IdentificacionId">Editar</a>
+                        <a asp-action="Details" class="btn btn-success" asp-route-id="@item.IdentificacionId">Detalles</a>
+                        <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.IdentificacionId">Borrar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        </thead>
+    </table>
+
+</body>
+<script src="~/js/Informacion.js" asp-append-version="true"></script>
